@@ -51,12 +51,10 @@ window.onload = function() {
 		resultDisplay.innerHTML = '';
 	};
 
-
 	clearBtn.onclick = function() {
 		resultDisplay.innerHTML = '';
 		num1 = '';
 		num2 = '';
-		answer = '';
 		currOperator = '';
 		operatorDisplay.innerHTML = '';
 		newNumber = true;
@@ -64,6 +62,7 @@ window.onload = function() {
 
 	for (var i = 0; i < numBtns.length; i++) {
 			numBtns[i].onclick = function() {
+
 				if(newNumber) {
 					num1 += this.innerHTML;
 					tempNum = this.innerHTML;
@@ -91,7 +90,6 @@ window.onload = function() {
 			operator_display.innerHTML = currOperator;
 			newNumber = false;
 			clearNumber = true;
-			num1 = parseInt(num1);
 
 			console.log(currOperator);
 		};
@@ -100,7 +98,6 @@ window.onload = function() {
 	enterBtn.onclick = function() {
 		displayNum(calc(num1, num2));
 	};
-
 };
 
 
